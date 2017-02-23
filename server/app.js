@@ -7,13 +7,10 @@ let bodyParser = require('body-parser');
 
 // import "mongoose"
 let mongoose = require('mongoose');
+// import the config module
+let config = require('./config/db');
 
-// URI
-let URI = "mongodb://localhost/videogames";
-
-//let URI = "mongodb://thomas:123456@ds054999.mlab.com:54999/videogames";
-
-mongoose.connect(URI);
+mongoose.connect(config.URI);
 //create a db object and make a reference to the db
 let db = mongoose.connection;
 //listen for a successful connection
@@ -36,7 +33,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../client')));
 
 app.use('/', index);
 

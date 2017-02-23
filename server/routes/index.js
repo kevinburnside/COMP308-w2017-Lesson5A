@@ -2,7 +2,7 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 //creating a game object-represents a document in the games collection
-let game = require('../config/games');
+let game = require('../models/games');
 
 /* GET home page. wildcard */
 router.get('/', (req, res, next) => {
