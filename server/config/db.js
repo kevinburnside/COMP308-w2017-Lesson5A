@@ -1,5 +1,6 @@
 module.exports={
     //Local MongoDB
-    "URI" : "mongodb://localhost/videogames"
-    //MLab -> "URI : "mongodb://thomas:123456@ds054999.mlab.com:54999/videogames";
+    //"URI" : "mongodb://localhost/videogames"
+    //MLab ->
+     "URI" : "mongodb://kevinburnside:12345@abc@ds161049.mlab.com:61049/videogames12";
 }
