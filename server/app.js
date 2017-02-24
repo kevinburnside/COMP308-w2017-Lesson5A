@@ -10,7 +10,7 @@ let mongoose = require('mongoose');
 // import the config module
 let config = require('./config/db');
 
-mongoose.connect(config.URI);
+mongoose.connect(process.env.URI || config.URI);
 //create a db object and make a reference to the db
 let db = mongoose.connection;
 //listen for a successful connection
